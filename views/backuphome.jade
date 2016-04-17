@@ -1,0 +1,55 @@
+include ./includes/head.jade
+	link(rel="stylesheet", href="public/css/vendor/responsiveslides.css")
+body
+
+	include ./includes/header.jade
+
+	include ./includes/nav.jade
+
+	main.container
+		#home-slider.slider-container
+			ul.rslides
+				li
+					figure
+						img#slider-img-1(src=" http://placehold.it/980x350?text=First+Slide")
+				li
+					figure
+						img#slider-img-2(src=" http://placehold.it/980x350?text=Second+Slide")
+				li
+					figure
+						img#slider-img-3(src=" http://placehold.it/980x350?text=Third+Slide")
+				//- span.left-arrow
+				//- span.right-arrow
+				//- .slider-controls
+				//- 	span
+				//- 	span
+				//- 	span
+
+		section#como-lo-hacemos
+			h3 ¿Cómo lo hacemos?
+			#steps-wrapper
+				ul
+					li
+						figure
+							img#step-1
+						p Sube una fotografía o escoge uno de nuestros modelos
+					li
+						figure
+							img#step-2
+						p Realizamos el modelado e impresión 3D del diseño elegido
+					li
+						figure
+							img#step-3
+						p Transformamos tu modelo a metal
+					li
+						figure
+							img#step-4
+						p Finalmente obtienes tu accesorio seleccionado
+
+			button Personaliza tu web
+
+	include ./includes/footer.jade
+
+include ./includes/scripts.jade
+	script(src="public/js/vendor/responsiveslides.min.js")
+	script(src="public/js/home.js")

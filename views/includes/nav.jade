@@ -1,0 +1,12 @@
+- var links = [];
+- links[0] = {text: 'Inicio', url: '/'};
+- links[1] = {text: '¿Quienes somos?', url: '/about'};
+- links[2] = {text: 'Personaliza tu historia', url: '/personaliza'};
+- links[3] = {text: 'Galería', url: '/galeria'};
+
+nav.container
+	ul
+		for link in links 
+			- var classActive = (link.url === activeUrl) ? 'active': ''
+			li(class="#{classActive}")
+				a(href="#{link.url}") #{link.text}

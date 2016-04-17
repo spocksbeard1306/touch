@@ -1,0 +1,33 @@
+script.
+	window.fbAsyncInit = function() {
+	FB.init({appId: '994239150668100',xfbml: true,version: 'v2.5'});
+	};
+	(function(d, s, id){
+	var js, fjs = d.getElementsByTagName(s)[0];
+	if (d.getElementById(id)) {return;}
+	js = d.createElement(s); js.id = id;
+	js.src = "//connect.facebook.net/en_US/sdk.js";
+	fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));
+
+header.container.clearfix
+	figure#header-logo-fig.f-left
+		img(src="/public/img/logoHeader.png")
+
+	#header-options-wrapper.f-right
+		ul
+			if user
+				li
+					a(href="/logout").txt-wrapper
+						span Cerrar Sesión
+					a(href="/logout").opt-img.fa.fa-sign-out#logout
+				li
+					a(href="/carrito").txt-wrapper
+						span Carrito de compras
+					a(href="/carrito").opt-img.fa.fa-shopping-cart#shopping-cart
+			else 
+				li
+					a.login(href="/login").txt-wrapper
+						span Iniciar Sesión
+						span.opt-link Registrarse
+					a.login(href="/login").opt-img.fa.fa-sign-in#login

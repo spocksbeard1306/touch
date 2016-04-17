@@ -1,0 +1,28 @@
+extend ./masters/layout.jade
+
+block css
+	link(rel="stylesheet", href="public/css/forgot.css")
+
+block main
+
+	main.container.clearfix
+		section#forgot
+			h2.text-center Recuperar contraseña
+
+			if message.length
+				.alert.success-msg.fa.fa-check #{message}
+
+			if error.length
+				.alert.error-msg.fa.fa-exclamation-triangle #{error}
+			form(method="POST")
+				.input-wrapper
+					label(for="email") Email
+					input#email(type="email", name="email", required)
+
+				div.loading.hide#spinner
+					span.fa.fa-spin.fa-spinner
+
+				button Enviar correo
+
+block scripts
+	script(src="/public/build/forgotReset.min.js")

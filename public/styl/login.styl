@@ -1,0 +1,80 @@
+main
+	background-color #7b6f6e
+	box-sizing border-box
+	font-family sans-serif
+	padding 50px 30px //
+	.fb-login
+		text-decoration: none;
+		padding 10px 0
+		padding-left 30px
+		width: 160px
+		border: 1px solid rgba(0, 0, 0, 0.5)
+		background-size: 100%;
+		background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #6486cf), color-stop(100%, #4a6baf));
+		color: #fff
+		position: relative
+		font-size: 0.75em
+		display block
+		margin 0 auto
+		border-radius: 4px
+		text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.4)
+
+		&:before
+			color white
+			position absolute
+			left 10px
+  
+	> section
+		box-sizing border-box
+		float left
+		padding 0 50px 30px //
+		width 50%
+		
+		&:last-child
+			box-shadow inset 5px 0 0 0 #49b8ff //
+		
+		form
+			button
+				background-color #579d9f
+				border 0
+				color white
+				display block
+				margin 35px auto 0 //
+				outline none
+				padding 10px 30px //
+				
+			.input-wrapper
+				margin-bottom 1.5rem //
+				position relative
+				
+				input
+					border 2px solid #49b8ff //
+					box-sizing border-box
+					float right
+					height 2rem //
+					padding 5px //
+					width 60% //
+					
+				label
+					color #49b8ff
+					display block
+					left 0
+					line-height .9rem //
+					position absolute
+					text-align right
+					top 50% //
+					transform translateY(-50%)
+					width 30% //
+			
+			#forgot-password
+				margin-top 20px //
+				text-align center
+				
+				a
+					color #e4e5e3 //
+				
+		h3
+			color white
+			font-weight normal
+			margin-bottom 50px //
+			text-align center

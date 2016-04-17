@@ -1,0 +1,55 @@
+extend ./masters/layout.jade
+
+block css
+	link(rel="stylesheet", href="public/css/login.css")
+
+block main
+
+	main.login.container.clearfix
+		section#login
+			h3 INICIAR SESIÓN
+			if message.length
+				.alert.error-msg.fa.fa-exclamation-triangle #{message}
+
+			form(action="/login", method="POST")
+				.input-wrapper.clearfix
+					label(for="username") Email
+					input#username(type="email", name="username", required)
+				.input-wrapper.clearfix
+					label(for="password") Contraseña
+					input#password(type="password", name="password", required)
+
+				a.fa.fa-facebook.fb-login(href="/auth/facebook") Ingresa con tu facebook
+				
+				button INICIA SESIÓN
+				#forgot-password
+					a(href="/forgot") ¿Olvidaste tu contraseña?
+
+		section#create
+			h3 CREA UNA CUENTA
+  
+			form#signup-form(action="/signup", method="POST")
+				#errors.hide.alert.error-msg.fa.fa-exclamation-triangle
+				#success.hide.alert.success-msg.fa.fa-check
+				.input-wrapper.clearfix
+					label(for="cc-nombres") Nombres
+					input#cc-nombres(type="text", name="firstName", required)
+				.input-wrapper.clearfix
+					label(for="cc-apellidos") Apellidos
+					input#cc-apellidos(type="text", name="lastName", required)
+				.input-wrapper.clearfix
+					label(for="cc-username") Email
+					input#cc-username(type="email", name="username", required)
+				.input-wrapper.clearfix
+					label(for="cc-password") Contraseña
+					input#cc-password(type="password", name="password", required, pattern=".{6,}", title="Minimo 6 caracteres")
+				.input-wrapper.clearfix
+					label(for="cc-confirm-password") Confirma contraseña
+					input#cc-confirm-password(type="password", name="confirm", required, pattern=".{6,}", title="Minimo 6 caracteres")
+
+				div.loading.hide#spinner
+					span.fa.fa-spin.fa-spinner
+				button#submit-signup CREAR CUENTA
+		
+block scripts
+	script(src="/public/build/login.min.js")

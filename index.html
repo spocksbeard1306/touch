@@ -1,0 +1,67 @@
+<html>
+   <head>
+     <title>Sample App</title>
+     <link rel="stylesheet" href="/public/css/sweetalert.css" />
+     <style>
+      .shape-picker img{
+        border: 1px solid red;
+      }
+      .preview-shape {
+      }
+      .preview {
+        position: relative;
+        display: inline-block;
+        overflow: hidden;
+        border: 1px solid red;
+        /*        width: 400px;
+           height: 258px; */
+      }
+      .cropped-image {
+        z-index: -1;
+        position:absolute;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        top: 0px;
+        -webkit-filter: grayscale(1);
+        filter: grayscale(1);
+      }
+      .preview-shape {
+        width: 100%;
+      }
+      .overlay {
+        position: absolute;
+        width: 100%;
+        left: 0px;
+        top: 0px;
+        bottom: 0;
+        z-index: 3;
+      }
+
+     </style>
+   </head>
+   <body>
+ <script>
+   window.fbAsyncInit = function() {
+     FB.init({
+       appId      : '519536591550835',
+       xfbml      : true,
+       version    : 'v2.5'
+     });
+   };
+
+   (function(d, s, id){
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) {return;}
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+   </script>
+
+     <div id='root'></div>
+     <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+     <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+     <script src="/static/bundle.js"></script>
+   </body>
+ </html>

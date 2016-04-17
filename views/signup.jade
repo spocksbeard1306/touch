@@ -1,0 +1,14 @@
+body
+  div #{message}
+  form(action="/signup", method="POST")
+    label firstname
+    input(type="text", name="firstName") 
+    label lastname
+    input(type="text", name="lastName") 
+    label email
+    input(type="text", name="username") 
+    label pass
+    input(type="text", name="password") 
+    label passagain
+    input(type="text", name="confirm") 
+    button submit

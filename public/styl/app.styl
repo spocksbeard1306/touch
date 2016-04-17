@@ -1,0 +1,249 @@
+@import "variables"
+
+html
+	background url(../img/fondoHome.jpg) no-repeat center center fixed
+	-webkit-background-size cover
+	-moz-background-size cover
+	-o-background-size cover
+	background-size cover
+	height 100%
+	
+footer
+header
+main
+nav
+.container
+	margin 0 auto
+	width 980px
+
+header
+	background-color white
+	box-sizing border-box
+	margin-top 18px
+	padding 36px 36px 36px 76px
+	border-radius 15px 15px 0 0 //
+	
+	#header-options-wrapper
+		a
+			text-decoration none
+		.fa
+			cursor pointer
+			&::before
+				background-color $fucsia
+				border-radius 5px
+				color white
+				display block
+				padding 5px
+				text-align center
+				width 17px
+
+footer
+	background-color white
+	border-radius 0 0 15px 15px //
+	border-top 3px solid #66adad //
+	color #663333
+	font-size 14px //
+	margin-bottom 18px //
+	
+	#contact-wrapper
+		margin 23px 0 26px
+		
+		#contact
+			margin-right 1rem //
+			text-align right
+			
+			> div
+				margin-bottom 12px
+				
+				&:last-child
+					margin-bottom 0
+					
+				> *
+					margin-left 5px
+					display inline-block
+					vertical-align top
+			.fa
+				cursor pointer
+				margin-left .5rem //
+				
+				&::before
+					background-color $fucsia
+					border-radius 5px
+					color white
+					display block
+					padding 5px
+					text-align center
+					width 17px
+				
+		#social
+			> *
+				display inline-block
+			
+			p
+				text-align center
+				width 290px
+
+			ul
+				font-size 0
+				width 196px
+				li
+					display inline-block
+					font-size 1rem //
+					text-align center //
+					width 20% //
+					
+					.fa
+						cursor pointer
+						&::before
+							background-color #663333
+							border-radius 5px
+							color white
+							display block
+							opacity .6
+							padding 5px
+							width 21px
+					
+	#copyright
+		border-top 2px solid #99c2c2
+		font-size 10px //
+		line-height 34px
+		margin 0
+		text-align center
+		
+main
+	background-color $marron
+	
+nav
+	background-color $celeste_oscuro
+	border-color $fucsia
+	border-style solid
+	border-width 5px 0 //
+	height 54px
+	
+	ul
+		font-size 0
+		line-height 54px
+		padding-right 66px
+		text-align right
+		
+		li
+			display inline-block
+			font-size 18px //
+			padding 0 15px //
+			text-shadow -2px 1px 0 #666666 //
+
+			
+			&.active
+				background-color #4b8788
+				text-shadow -2px 1px 0 #000000 //
+
+			&:last-child
+				padding-right 0
+
+			a
+				display block
+				color white
+				text-decoration none
+				
+.bkg-opacity
+	background-color rgba(0, 0, 0, .3)
+	overflow auto
+
+.dashed-border-wrapper
+	border-bottom 1px dashed #4a8782
+	border-top 1px dashed #4a8782
+	
+.slider-container
+	position relative
+	
+#header-logo-fig
+	height 90px
+	margin 0
+	width 266px
+
+#header-options-wrapper
+	ul
+		font-size 0
+		
+		li
+			display inline-block
+			vertical-align middle
+			font-size 14px //
+			
+			> *
+				display inline-block
+				
+			.opt-img
+				vertical-align top
+				
+			.txt-wrapper
+				margin-right 5px
+				
+				span
+					display block
+					text-align right
+					width 100px
+					
+				.opt-link
+					color $fucsia
+					
+.loading
+	text-align center
+	font-size 25px
+	color white
+
+.container.galeria
+	padding 0 70px
+
+@media only screen and (max-width: 979px) and (min-width: 768px)
+	.container
+		width 768px
+	#como-lo-hacemos #steps-wrapper ul li
+		width 140px !important
+	.login
+		section
+			width 100%
+			box-shadow none !important
+
+@media only screen and (max-width: 767px) and (min-width: 480px)
+	.container
+		width 480px
+	#como-lo-hacemos #steps-wrapper ul li
+		width 140px !important
+		float left
+	.container.galeria
+		padding 0 100px
+	.login
+		section
+			width 100%
+			box-shadow none !important
+	nav
+		height auto
+		ul
+			padding-right 0
+			li
+				display block
+				text-align center
+
+@media only screen and (max-width: 480px)
+	.container
+		width 300px
+	#como-lo-hacemos #steps-wrapper ul li
+		width 140px !important
+		float left
+	#header-logo-fig
+		width 150px !important
+		margin-bottom 10px
+	.login
+		section
+			width 100%
+	nav
+		height auto
+		ul
+			padding-right 0
+			li
+				display block
+				text-align center
+		box-shadow none !important
+	.container.galeria
+		padding 0 20px

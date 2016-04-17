@@ -1,0 +1,54 @@
+extend ./masters/layout.jade
+
+block css
+	link(rel="stylesheet", href="public/css/customize.css")
+
+block main
+
+	main.container
+		.bkg-opacity
+			h2 Utilizando una fotografía
+
+		section#img-treat.dashed-border-wrapper.clearfix
+			#steps.clearfix
+				figure#barrita.paso1
+				#pasito-a-pasito
+					#paso1.active
+						.pasito-wrapper.clearfix
+							h3 Paso 1
+							p Escoge la forma de tu accesorio y sube tu foto
+							
+						#shapes-container
+							ul
+								li
+									figure#circulo.active
+								li
+									figure#corazon
+								li
+									figure#rectangulo
+								li
+									figure#cuadrado
+
+					#paso2
+						.pasito-wrapper.clearfix
+							h3 Paso 2
+							p Escala la imagen y determina la ubicación
+					#paso3
+						.pasito-wrapper.clearfix
+							h3 Paso 3
+							p Previsializa el fotograbado 3D resultante
+					#paso4
+						.pasito-wrapper.clearfix
+							h3 Paso 4
+							p Confirmación de la orden
+
+
+			#preview
+
+		
+		form.bkg-opacity
+			.input-wrapper
+				label(for="historia") Aquí escribe la historia de este accesorio tan especial
+				textarea#historia(name="historia")
+
+// block scripts

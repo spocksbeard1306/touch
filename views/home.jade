@@ -1,0 +1,48 @@
+extend ./masters/layout.jade
+
+block css
+	link(rel="stylesheet", href="public/css/vendor/responsiveslides.css")
+
+block main
+
+	main.container
+		#home-slider.slider-container
+			ul.rslides
+				li
+					figure
+						img#slider-img-1(src="/public/img/home/slide01.jpg")
+				li
+					figure
+						img#slider-img-2(src="/public/img/home/slide02.jpg")
+				li
+					figure
+						img#slider-img-3(src="/public/img/home/slide03.jpg")
+
+		section#como-lo-hacemos
+			h3 ¿Cómo lo hacemos?
+			#steps-wrapper
+				ul
+					li
+						figure
+							img#step-1(src="/public/img/home/hacemos1.png")
+						p Sube una fotografía o escoge uno de nuestros modelos
+					li
+						figure
+							img#step-2(src="/public/img/home/hacemos2.png")
+						p Realizamos el modelado e impresión 3D del diseño elegido
+					li
+						figure
+							img#step-3(src="/public/img/home/hacemos3.png")
+						p Transformamos tu modelo a metal
+					li
+						figure
+							img#step-4(src="/public/img/home/hacemos4.png")
+						p Finalmente obtienes tu accesorio seleccionado
+
+			button
+				a(href="/personaliza") Personaliza tu web
+
+
+block scripts
+	script(src="public/js/vendor/responsiveslides.min.js")
+	script(src="public/js/home.js")

@@ -1,0 +1,18 @@
+extend ./masters/layout.jade
+
+block css
+  link(rel="stylesheet", href="public/css/customize.css")
+
+block main
+    
+  input(type="hidden",id="initialState",value="#{initialState}") 
+  main.container
+    .bkg-opacity
+      h2 Utilizando una fotografía
+    div#root
+
+block scripts
+  script(src="//code.jquery.com/ui/1.11.4/jquery-ui.js")
+  script(src="public/js/vendor/nouislider.min.js")
+  script(src="public/build/bundle.min.js")
+  //- script(src="http://localhost:3000/static/bundle.min.js")

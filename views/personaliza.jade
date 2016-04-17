@@ -1,0 +1,32 @@
+extend ./masters/layout.jade
+
+block css
+	link(rel="stylesheet", href="public/css/personaliza.css")
+
+block main
+
+	main.container
+		.bkg-opacity
+			h2 Selecciona la manera de personalizar tu accesorio:
+
+		section#personalize-ways
+			ul.dashed-border-wrapper
+				li
+					article
+						h4 Utilizando una fotografía
+						a(href="/customize")
+							figure
+								img(src="/public/img/botFoto.png")
+						p La imagen realizará un fotograbado sobre el soporte de metal
+
+				li
+					article
+						h4 A partir de nuestros modelos
+						figure
+							img(src="/public/img/botModelo.png")
+						p Escoge una forma que se relacione con esa memoria especial
+
+		.bkg-opacity#bottom-space
+
+
+//block scripts

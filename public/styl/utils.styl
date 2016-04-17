@@ -1,0 +1,65 @@
+.text-center
+	text-align center
+
+/* Positioning */
+.pos-abs
+	position absolute
+.pos-fix
+	position fixed
+.pos-rel
+	position relative
+.pos-stc
+	position static
+/***************/
+
+/* Spacers */
+.center-block
+	margin 0 auto
+.no-margin
+	margin 0
+.no-padding
+	padding 0
+
+.no-bottom
+	margin-bottom 0
+.no-left
+	margin-left 0
+.no-right
+	margin-right 0
+.no-top
+	margin-top 0
+
+/***********/
+
+/* Floating elements */
+.container::before
+.container::after
+.clearfix::before
+.clearfix::after
+	content ' '
+	display table
+	-webkit-flex-basis 0
+	-ms-flex-preferred-size 0
+	flex-basis 0
+	-webkit-order 1
+	-ms-flex-order 1
+	order 1
+.container::after
+.clearfix::after
+	clear: both;
+.f-left
+	float left
+.f-none
+	float none
+.f-right
+	float right
+	
+.micro-clearfix:before
+.micro-clearfix:after
+	content ""
+	display table
+.micro-clearfix:after
+	clear both
+.micro-clearfix
+	zoom 1 /* For IE 6/7 (trigger hasLayout) */
+/*********************/

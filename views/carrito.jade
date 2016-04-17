@@ -1,0 +1,20 @@
+extend ./masters/layout.jade
+
+block css
+	link(rel="stylesheet", href="public/css/orders.css")
+
+block main
+
+	main.container.clearfix
+		section.orders
+			for order in orders
+				span.order
+					img(src="#{order.image}")
+					div Cantidad: #{order.data.amount}
+					div Costo: #{order.data.price}
+					div Tamaño: #{order.data.size}
+					div Material: #{order.data.material}
+					div Forma: #{order.data.shape}
+					div Frase: #{order.data.phrase}
+
+			

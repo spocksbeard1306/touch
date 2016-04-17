@@ -1,0 +1,166 @@
+@import "variables.styl"
+
+main
+  font-family sans-serif
+  background url("/public/img/fondoLimpio.jpg") no-repeat center center
+  background-size cover
+  box-sizing border-box
+  section
+    font-size 14px
+	
+  form
+    padding 20px 50px
+
+      .input-wrapper
+      label
+        color #6ec0bc
+        display block
+
+  h2
+    color #6ec0bc
+    margin 30px 50px 10px
+    text-shadow -2px 1px 0 #000
+		
+  #img-treat
+    padding 20px 30px
+		
+    > div
+      color white
+      float left
+      width 50%
+
+.shape-picker
+  height: 170px
+.shape-picker img
+  margin: 0 10px;
+
+.preview
+  border-radius: 40px;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+
+.bottom-options
+  width: 100%;
+
+.share {
+border: 1px solid rgba(0, 0, 0, 0.5);
+background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #6486cf), color-stop(100%, #4a6baf));
+color: #fff;
+border-radius: 4px;
+margin-right: 10px;
+padding: 10px;
+}
+
+#paso2 {
+height: 80px;
+}
+#paso3 {
+height: 70px;
+}
+
+#pasito-a-pasito {
+  margin-left: 32px;
+  width: 380px;
+}
+#pasito-a-pasito > div.active {
+  color: #fff;
+}
+#pasito-a-pasito > div h3 {
+font-family: 'Pacifico', cursive;
+display: inline;
+}
+#pasito-a-pasito > div p {
+
+  margin-left: 10px;
+display: inline;
+}
+#pasito-a-pasito > div.active h3 {
+  border-bottom: 2px dashed $fucsia;
+}
+
+#barrita {
+  float: left;
+  height: 345px;
+  width: 28px;
+}
+#barrita.paso1 {
+  background: url('/public/img/customize/barraPaso1.png')
+}
+#barrita.paso2 {
+  background: url('/public/img/customize/barraPaso2.png')
+}
+#barrita.paso3 {
+  background: url('/public/img/customize/barraPaso3.png')
+}
+#barrita.paso4 {
+  background: url('/public/img/customize/barraPaso4.png')
+}
+
+
+#size-picker,
+#material-picker {
+  text-align: left;
+}
+#size-picker .radio label{
+  margin: 0 40px;
+}
+#material-picker .radio label{
+  margin: 0 20px;
+}
+.bottom-options > div > div {
+  margin: 15px 0;
+}
+.bottom-options input[type="text"] ,
+.bottom-options input[type="number"] ,
+.bottom-options textarea {
+color: black;
+  width: 80%;
+}
+.bottom-options .title {
+  font-weight: 600;
+  color: #66cccc;
+  margin-bottom: 5px;
+}
+#upload {
+  text-align: center;
+  cursor: pointer;
+  z-index: 10;
+  position: relative;
+  top: 50%;
+  left: 0;
+}
+.cropped-image {
+  z-index: 1;
+  position:absolute;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  top: 0px;
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+}
+.preview-shape {
+  width: 100%;
+  position: absolute;
+  z-index: 3;
+}
+.overlay {
+  position: absolute;
+  width: 100%;
+  left: 0px;
+  top: 0px;
+  bottom: 0;
+  z-index: 3;
+}
+.noUi-target {
+  margin: 10px 0;
+  width: 365px;
+  margin-top: 40px;
+}
+.btn-preview {
+  text-align: center;
+}
+.btn-preview > span {
+margin: 0 10px;
+}
