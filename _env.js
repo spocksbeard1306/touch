@@ -2,17 +2,19 @@ module.exports = {
   email: {
     user: 'jcdevelopment1991@gmail.com',
     pass: 'recontragg703',
-    from: 'Touch Purchase <jcdevelopment1991@gmail.com>',
+    from: 'Yuyari <jcdevelopment1991@gmail.com>',
     to: 'juanc.jara@pucp.pe'
   },
   facebook: {
-    clientID: '519536591550835',
-    clientSecret: '455ec6282ee8eb790e3ef61ed9b508c4'
+      //clientID: '994239150668100',
+      clientID: '751152135021364',
+      //clientSecret: 'be5c6a66108b7859ca5151d1e764fb75'
+      clientSecret: '4142797ef9850fe6e474fbca2f3f1b8b'
   },
   database: {
     name: 'touch',
     user: 'root',
-    password: 'reporelteam',
+    password: 'admin',
     options: {
       host: 'localhost',
       dialect: 'mysql',
